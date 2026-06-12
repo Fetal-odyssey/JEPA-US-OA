@@ -1,0 +1,54 @@
+# Configuration fine-tuning segmentation JEPA-US-OA
+# Auteur : Olivier Ami — 2026
+
+model:
+  architecture: JEPAUNet
+  encoder: vit_base_patch16_224
+  encoder_pretrain: ijepa_us_vitb16.pt
+  decoder_channels: [512, 256, 128, 64]
+  img_size: 384
+  classes: 1
+
+data:
+  dataset: HC18
+  train_split: 0.80
+  val_split: 0.10
+  test_split: 0.10
+  img_size: 384
+  batch_size: 64
+  num_workers: 4
+  augmentation:
+    horizontal_flip: true
+    rotation_range: 10
+    brightness_range: [0.8, 1.2]
+    speckle_noise_std: 0.02
+
+training:
+  optimizer: AdamW
+  lr_encoder: 5.0e-5
+  lr_head: 5.0e-4
+  weight_decay_encoder: 0.05
+  weight_decay_head: 0.01
+  scheduler: CosineAnnealingLR
+  n_epochs: 80
+  patience: 15
+  amp: true
+  dtype: bfloat16
+  grad_clip: 1.0
+
+loss:
+  type: combined
+  alpha: 0.5  # 0.5 * Dice + 0.5 * BCE
+  dice_smooth: 1.0
+
+evaluation:
+  metrics: [dice, hd95, hc_mae, r2, failure_rate]
+  thresholds:
+    dice: 0.93
+    hc_mae_mm: 2.5
+    failure_rate: 0.05
+    r2: 0.95
+
+postprocessing:
+  hc_method: ramanujan_ellipse
+  contour_min_points: 5
