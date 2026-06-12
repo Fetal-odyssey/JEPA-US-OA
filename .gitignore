@@ -1,0 +1,23 @@
+# Checkpoints et poids (trop lourds)
+*.pt
+*.pth
+*.ckpt
+checkpoints/
+
+# Données brutes (téléchargées séparément)
+*.zip
+*.tar.gz
+*.rar
+
+# Outputs temporaires
+__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/
+
+# Credentials
+*.json
+!configs/hc18_splits.json
+
+# Figures intermédiaires (garder uniquement les finales)
+figures/tmp/
