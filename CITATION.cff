@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Si vous utilisez ce travail, merci de le citer."
+authors:
+  - family-names: Ami
+    given-names: Olivier
+    email: dr.olivierami@gmail.com
+title: "JEPA-US-OA: Fetal Head Segmentation and Biometry from 2D Ultrasound using Joint-Embedding Predictive Architectures"
+version: 1.0.0
+date-released: 2026-06-12
+url: "https://github.com/Fetal-odyssey/JEPA-US-OA"
+keywords:
+  - fetal ultrasound
+  - head circumference
+  - segmentation
+  - JEPA
+  - self-supervised learning
+  - medical image analysis
+license: MIT
