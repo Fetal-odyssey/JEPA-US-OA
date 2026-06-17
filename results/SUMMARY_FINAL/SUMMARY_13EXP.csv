@@ -1,0 +1,14 @@
+id,nom,phase,gpu_h,usd,cible,status,mae_mm,bias_mm,rho_es,dice_best,silent_fail_rate,pass_fail,dice_le,ratio
+EXP04_RANSAC,RANSAC-Fitzgibbon,P1-CPU,0,0.0,biais<5mm,OK,46.306,-15.044,,,,,,
+EXP05_CALIBRATION,Calibration isotonique,P1-CPU,0,0.0,biais<=1mm,OK,,,,,,,,
+EXP10_ELLIPTICITY,Ellipticity Score,P1-CPU,0,0.0,rho(ES)>rho(Dice),OK,,,0.1898,,,,,
+EXP02_LORA,LoRA rank-8,P1-GPU,4,12.0,Dice>=0.90,OK,,,,0.8887,,,,
+EXP09_SAM2_LORA,SAM2+LoRA,P1-GPU,6,18.0,comparison,OK,,,,,,,,
+EXP03_SSL_BENCHMARK,SSL Benchmark,P1-GPU,46,35.0,I-JEPA>MAE>DINOv2,OK,,,,,,,,
+EXP01_IJEPA_120K,I-JEPA 120k,P1-GPU,72,55.0,gain>=+1.5%,OK,,,,0.8468,,,,
+EXP06_VJEPA2,V-JEPA2 video,P2-VIDEO,60,46.0,jitter<=3deg,OK,,,,,,,,
+EXP07_ABLATION,Ablation 12runs,P2-VIDEO,36,28.0,tableau complet,OK,,,,,,,,
+EXP08_PSFHS_ZEROSHOT,PSFHS zero-shot,P2-VIDEO,2,2.0,Dice>=0.85,OK,,,,,,,,
+EXP11_MC_DROPOUT,MC Dropout,P3-PREMIUM,2,1.5,silent_fail<5%,OK,,,,,0.355,FAIL,,
+EXP12_STRATIFICATION,Stratification GA,P3-PREMIUM,0,0.0,stable T1/T2/T3,OK,,,,,,,,
+EXP13_LEJEPA,LeJEPA,P3-PREMIUM,6,4.0,ratio>=0.90,OK,,,,,,PASS,0.8875,1.0481

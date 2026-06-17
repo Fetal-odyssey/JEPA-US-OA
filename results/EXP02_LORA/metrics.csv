@@ -1,0 +1,2 @@
+dice_best,dice_last,loss_last,hc_mae_mm,n_hc,exp,timestamp
+0.197,0.1551,0.3053,-1.0,0,EXP02_LORA,20260616_090049

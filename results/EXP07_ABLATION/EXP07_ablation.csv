@@ -1,0 +1,13 @@
+run,arch,augment,lr_head,dice_best,error
+JEPAUNet_standard_lr1e-04,JEPAUNet,standard,0.0001,0.8885,
+JEPAUNet_standard_lr5e-05,JEPAUNet,standard,5e-05,0.8847,
+JEPAUNet_standard_lr2e-04,JEPAUNet,standard,0.0002,0.889,
+JEPAUNet_heavy_lr1e-04,JEPAUNet,heavy,0.0001,,'int' object has no attribute 'Compose'
+JEPAUNet_heavy_lr5e-05,JEPAUNet,heavy,5e-05,,'int' object has no attribute 'Compose'
+JEPAUNet_heavy_lr2e-04,JEPAUNet,heavy,0.0002,,'int' object has no attribute 'Compose'
+EfficientNet-b4_standard_lr1e-04,EfficientNet-b4,standard,0.0001,0.863,
+EfficientNet-b4_standard_lr5e-05,EfficientNet-b4,standard,5e-05,0.8501,
+EfficientNet-b4_standard_lr2e-04,EfficientNet-b4,standard,0.0002,0.8717,
+EfficientNet-b4_heavy_lr1e-04,EfficientNet-b4,heavy,0.0001,,'int' object has no attribute 'Compose'
+EfficientNet-b4_heavy_lr5e-05,EfficientNet-b4,heavy,5e-05,,'int' object has no attribute 'Compose'
+EfficientNet-b4_heavy_lr2e-04,EfficientNet-b4,heavy,0.0002,,'int' object has no attribute 'Compose'

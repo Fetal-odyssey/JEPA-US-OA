@@ -1,0 +1,4 @@
+model,dice,G,mask_sz
+I-JEPA_vitb16,0.8799,24,384
+MAE_vitb16,0.879,24,384
+DINOv2_vitb14,0.8839,37,518
